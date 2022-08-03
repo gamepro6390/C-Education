@@ -4,6 +4,7 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
 
 int main(void)
 {
@@ -54,5 +55,19 @@ int main(void)
 	printf("%d\n", sizeof(float));
 	printf("%d\n", sizeof(double));
 	printf("%d\n\n", sizeof(long double));
+	printf("\n");
+
+	//입력
+	int Number;
+	printf_s("입력: "); // scanf는 출력 기능이 없음.
+	scanf_s("%d", &Number); //_s 보안 문제
+	printf_s("입력 받은 값: %d\n\n", Number);
+
+	int age;
+	double height;
+	printf("나이와 키를 입력하세요 :");
+	scanf_s("%d%lf", &age, &height);
+	printf(" 나이는 %d살 . 키는 %.1lfcm입니다.\n", age, height);
+
 	return 0;
 }

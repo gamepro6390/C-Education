@@ -28,6 +28,18 @@ int main(void)
 	// & [AND]
 	// | [OR]
 	// ^ [XOR]
+	//cpu (-)연산을 할 수없다.
+	//그러므로 아래와 같이 표현할수 있다
+	//10+(-9)
+	{int i = 1;
+	printf("shift <<1 연산\n");
+	printf("%d\n", (i << 1));
+	int b = 10;
+	printf("shift >>1 연산 \n");
+	printf("%d\n", (b >> 1));
+	}
+	// length/2 == length*0.5f == length>>1(가장빠름,but float형은 사용불가)
+
 
 	//형변환
 	{
@@ -45,6 +57,6 @@ int main(void)
 	//복합대입 연산자
 	//+=, -=, *=, /=, %=
 	
-
+	
 	return 0;
 }

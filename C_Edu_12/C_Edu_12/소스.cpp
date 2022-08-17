@@ -18,6 +18,8 @@ int main(void)
 	int* pi;
 	double* pd;
 
+
+	//malloc은 void*가 기본이기 때문에 강제 형 변환을 해줘야함 .
 	pi = (int*)malloc(sizeof(int));
 	if (pi == NULL)
 	{
@@ -34,9 +36,19 @@ int main(void)
 
 	free(pi);
 	free(pd);
+
 	{
 		printf("void 포인터의 사이즈: %d\n", sizeof(void*));
 	}
 
+	{
+		const int MAX = 8;
+		//Array 안에 hip주소가 들어 있음 , 자기 주소는 stack안에 존재
+		int* Array = (int*)malloc(sizeof(int) * MAX);
+		for (int i = 0; i < MAX; ++i)
+			Array[i] = (10 * i + 10);
+		for (int i = 0; i < MAX; ++i)
+			printf("%d\n", Array[i]);
+	}
 	return 0;
 }

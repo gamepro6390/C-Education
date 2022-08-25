@@ -31,9 +31,9 @@ typedef struct Object
 */
 struct Time
 {
-	int Hour;
-	int Minute;
-	int Second;
+	char Hour;
+	char Minute;
+	char Second;
 };
 
 int main(void)
@@ -66,16 +66,19 @@ int main(void)
 			//tTime.Second=tTime.Second + ITime;
 			printf("%02d:%02d:%02d\n",tTime.Hour,tTime.Minute,++tTime.Second);
 
+			//초침이 60이 되면 초침은 다시 0으로 만들고 분침 1증가
 			if (tTime.Second >= 60)
 			{
 				tTime.Second = 0;
 				++tTime.Minute;
 			}
+			//분침이 60이 되면 분침은 다시 0으로 만들고 시간 1증가
 			if (tTime.Minute >= 60)
 			{
 				tTime.Minute = 0;
 				++tTime.Hour;
 			}
+			//시침이 24가 되면 모두 0
 			if (tTime.Hour >= 24)
 			{
 				tTime.Hour = 0;

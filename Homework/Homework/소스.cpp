@@ -23,12 +23,12 @@ struct Vector2
 
 	Vector2() : x(0), y(0)
 	{
-		
+
 	}
 
 	Vector2(int _x, int _y) : x(0), y(0)
 	{
-		
+
 	}
 };
 
@@ -69,13 +69,13 @@ int main(void)
 
 	// ** 플레이어 초기화
 	Object Enemy;
-	Enemy.Position=Vector2(int(120 * 0.3333f * 2), 40 >> 1);
+	Enemy.Position = Vector2(int(120 * 0.3333f * 2), 40 >> 1);
 	//Enemy.Position.x = int(120*0.3333f*2); // literal 상수
 	//Enemy.Position.y = 40>>1;
 	// 나누기 2에 대한 비트 연산
 
 	Enemy.Texture = (char*)"■";
-	Enemy.Scale=Vector2((int)strlen(Enemy.Texture), 1);
+	Enemy.Scale = Vector2((int)strlen(Enemy.Texture), 1);
 	/*Enemy.Scale.x = (int)strlen(Enemy.Texture);
 	Enemy.Scale.y = 1;*/
 
@@ -108,7 +108,7 @@ int main(void)
 
 
 
-	
+
 
 	while (true)
 	{
@@ -123,7 +123,7 @@ int main(void)
 
 
 			//** Render구간
-			 
+
 			//Player
 			SetCursorPosition(
 				Player.Position.x,
@@ -194,7 +194,7 @@ int main(void)
 					/*if (Player.Position.x + 2 > Enemy.Position.x &&
 						Enemy.Position.x + 2 > Player.Position.x &&
 						Player.Position.y == Enemy.Position.y)*/
-					//크기값을 함께 설정해서 범위 충돌 만들어야 함.
+						//크기값을 함께 설정해서 범위 충돌 만들어야 함.
 					if (Bullet[i].Scale.x <= Player.Position.x && Bullet[i].Scale.y == Player.Scale.y) {
 
 
@@ -219,8 +219,7 @@ int main(void)
 
 					//총알을 그린다.
 					printf("%s", Bullet[i].Texture);
-					printf("충돌입니다.");
-					
+
 				}
 			}
 		}

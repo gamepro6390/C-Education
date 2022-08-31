@@ -82,7 +82,7 @@ int main(void)
 
 			printf("%s", Player.Texture);
 			int Num = 0;
-			printf("충돌 횟수:%d", global);
+			
 
 
 
@@ -126,7 +126,12 @@ int main(void)
 						{
 							global = global + 1;
 
-							printf("\n충돌 하였습니다.");
+							SetCursorPosition(55, 1);
+							printf("충돌 하였습니다.");
+							SetCursorPosition(55, 2);
+							printf("충돌 횟수:%d", global);
+
+
 							Sleep(1000); //print 문을 조금 유지 시켜주기 위해
 
 							ShowBullet[i] = false;

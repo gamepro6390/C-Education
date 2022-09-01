@@ -346,6 +346,7 @@ void StageProgress(Object* _Player, Object* _Enemy)
 			Check[i] = false;
 	}
 
+
 	if (Collision(_Player, _Enemy))
 	{
 		SetCursorPosition(120 >> 1, 1);

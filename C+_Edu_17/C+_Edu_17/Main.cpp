@@ -54,6 +54,7 @@ int main(void)
  	return 0;
 }
 
+
 Node* CreateNode()
 {
 	Node* pNode = (Node*)malloc(sizeof(Node));

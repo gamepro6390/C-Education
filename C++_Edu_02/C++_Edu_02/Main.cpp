@@ -72,7 +72,7 @@ void empty::Output()
 {
 	cout << number << endl;
 } //inline ÇÔ¼ö ¾Æ´Ô.
-
+  
 
 int main(void)
 {

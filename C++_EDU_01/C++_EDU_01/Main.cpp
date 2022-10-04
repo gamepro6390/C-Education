@@ -46,7 +46,7 @@ const float PI = 3.1416592f;
 const char* const FileName = "../Data/image.png";
 string FileName = "../Data/image.png";
 
-class AAA
+class AAA 
 {
 private:
 	

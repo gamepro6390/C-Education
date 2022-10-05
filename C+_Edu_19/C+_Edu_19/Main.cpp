@@ -15,7 +15,7 @@ struct Object
 	Vector2 Position;
 	Vector2 Scale;
 	char* Texture;
-};
+}; 
 
 struct Node
 {

@@ -1,21 +1,20 @@
 #pragma once
 #include "Headers.h"
+
 class Object
 {
-	private:
-		// ** 변수 생성
-	public:
-		// ** 초기화
-		void virtual Initialize();
+private:
+	// ** 변수 생성.
+public:
+	// ** 초기화
+	virtual void Initialize()PURE;
 
-		// ** 변경
-		void Progress();
+	// ** 변경
+	virtual void Progress()PURE;
 
-		// ** 갱신
-		void Render();
+	// ** 갱신
+	virtual void Render()PURE;
 
-		// ** 삭제
-		void Release();
-
+	// ** 삭제
+	virtual void Release()PURE;
 };
-

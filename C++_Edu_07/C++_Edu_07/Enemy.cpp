@@ -2,24 +2,20 @@
 
 void Enemy::Initialize()
 {
-	cout << "Player::Initialize" << endl;
-
+	cout << "Enemy::Initialize" << endl;
 }
 
 void Enemy::Progress()
 {
-	cout << "Player::Progress" << endl;
-
+	cout << "Enemy::Progress" << endl;
 }
 
 void Enemy::Render()
 {
-	cout << "Player::Render" << endl;
-
+	cout << "Enemy::Render" << endl;
 }
 
 void Enemy::Release()
 {
-	cout << "Player::Release" << endl;
-
+	cout << "Enemy::Release" << endl;
 }

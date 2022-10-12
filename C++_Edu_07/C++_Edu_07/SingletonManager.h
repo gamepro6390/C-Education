@@ -2,24 +2,28 @@
 #include "Player.h"
 #include "Enemy.h"
 
-// ** 객체 관리
+// ** 관리자 클래스로 사용하기 위함.
+// ** 단 하나의 인스턴스만 만들고 싶을때 사용한다.
 class Object;
 class SingletonManager
 {
+
 private:
 	static SingletonManager* Instance;
+
+
 public:
-	static SingletonManager* GetInstance()  // static변수는 static 함수안에서 작동.
+	static SingletonManager* GetInstance()
 	{
-		if (Instance=nullptr)
-		{
+		if (Instance == nullptr)
 			Instance = new SingletonManager;
-			return Instance;
-		}
+		return Instance;
 	}
-public: 
-	Object* CreatePlayer() {return new Player;}
-	Object* CreateEnemy() {return new Enemy;}
+
+
+public:
+	Object* CreatePlayer() { return new Player; }
+	Object* CreateEnemy() { return new Enemy; }
 };
 
-SingletonManager* SingletonManager::Instance = nullptr;
+SingletonManager* SingletonManager::Instance = nullptr; //런타임 전부터 nullptr로 초기화 되어 있음.

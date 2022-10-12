@@ -1,6 +1,4 @@
 #include "Player.h"
-#include "SingletonManager.h"
-
 
 void Player::Initialize()
 {
@@ -9,18 +7,15 @@ void Player::Initialize()
 
 void Player::Progress()
 {
-	cout << "Player::Progrees" << endl;
-
+	cout << "Player::Progress" << endl;
 }
 
 void Player::Render()
 {
 	cout << "Player::Render" << endl;
-
 }
 
 void Player::Release()
 {
 	cout << "Player::Release" << endl;
-
 }

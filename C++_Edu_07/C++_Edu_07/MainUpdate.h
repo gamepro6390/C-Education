@@ -4,14 +4,13 @@
 class Object;
 class MainUpdate
 {
-private: 
-	// ** 변수 생성
-	Object* 
+private:
+	// ** 변수 생성.
+	Object* ObjectList[2];
 public:
-	MainUpdate();
 	// ** 초기화
 	void Initialize();
-	
+
 	// ** 변경
 	void Progress();
 
@@ -20,4 +19,7 @@ public:
 
 	// ** 삭제
 	void Release();
+public:
+	MainUpdate();
+	~MainUpdate();
 };

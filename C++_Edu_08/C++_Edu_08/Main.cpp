@@ -7,7 +7,7 @@ using namespace std;
 class Object
 {
 private:
-	string Name;
+	string Name; 
 
 public:
 	string GetName() { return Name; }

@@ -45,9 +45,64 @@ Singleton* Singleton::Instance = nullptr;
 
 
 
+// ** 연산자 오버로딩
+class Operator
+{
+public:
+	int Number;
+
+public:
+	Operator operator+(Operator& _ref)
+	{
+		return Operator(Number + _ref.Number);//void 가 아니면 return 필요	
+	}
+	/*
+	 [반환값] = 피연산자 연산자 피연산자
+	               ↓       ↓   ↓
+	[반환값] [자기자신]+([연산할 항목])
+	{
+		return [반환값]
+	}
+	
+	*/
+public:
+	Operator operator-(Operator& _ref)
+	{
+		return Operator(Number - _ref.Number);//void 가 아니면 return 필요	
+	}
+	void operator +=(Operator& _ref)
+	{
+		Number += _ref.Number;
+	}
+
+public:
+	Operator() : Number(0) { }
+	Operator(int _Number) : Number(_Number) { }
+};
+
 
 int main(void)
 {
+	
+
+
+
+
+
+
+
+	/*
+	Operator oper1, oper2;
+	oper1.Number = 10;
+	oper2.Number = 20;
+	Operator oper3 = oper1+oper2;
+	Operator oper4 = oper3 - oper2;
+	oper1 += oper2;
+	cout << oper3.Number << endl;
+	cout << oper4.Number << endl;
+	cout << oper1.Number << endl;
+	*/
+	/*
 	{
 		Object* O1 = new Object();
 		O1->SetName("홍길동");
@@ -59,6 +114,6 @@ int main(void)
 	string str = Singleton::GetInstance()->GetObject()->GetName();
 	cout << str << endl;
 
-
+	*/
 	return 0;
 }

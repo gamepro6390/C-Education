@@ -1,17 +1,12 @@
 #pragma once
-#include "Headers.h"
-
-class MainUpdate : public Object
+class MainUpdate
 {
-
-
 public:
-	virtual void Start(void)PURE;
-	virtual void Update(void)PURE;
-	virtual void Render(void)PURE;
-	virtual void Release(void)PURE;
-
+	void Start(void);
+	void Update(void);
+	void Render(void);
+	void Release(void);
 public:
-	MainUpdate();
-	virtual ~MainUpdate(); //메모리 누수 방지
+	MainUpdate(void);
+	~MainUpdate(void);
 };

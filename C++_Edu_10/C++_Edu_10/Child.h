@@ -1,7 +1,6 @@
 #pragma once
 #include "Object.h"
 
-//추상 클래스
 class Child : public Object
 {
 public:
@@ -9,7 +8,6 @@ public:
 	virtual void Update(void)override;
 	virtual void Render(void)override;
 	virtual void Release(void)override;
-
 public:
 	Child();
 	virtual ~Child();

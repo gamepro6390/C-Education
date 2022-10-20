@@ -15,10 +15,12 @@ void Child::Start(void)
 	Info.Position = Vector3(0.0f, 0.0f, 0.0f);
 	Info.Rotation = Vector3(0.0f, 0.0f, 0.0f);
 	Info.Scale = Vector3(0.0f, 0.0f, 0.0f);
+
 }
 
 void Child::Update(void)
 {
+	++Info.Position.x;
 	if (GetAsyncKeyState(VK_RETURN))
 		ScaneManager::GetInstance()->SetScene(EXITID);
 }

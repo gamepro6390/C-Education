@@ -25,7 +25,7 @@ void Logo::Update(void)
 
 void Logo::Render(void)
 {
-
+	
 }
 
 void Logo::Release(void)

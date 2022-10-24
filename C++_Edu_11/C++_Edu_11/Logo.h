@@ -1,8 +1,31 @@
 #pragma once
 #include "Scene.h"
 
+//=======================================
+// Logo Slider
+//=======================================
+struct SliderTransform
+{
+	Transform Info;
+	string Texture;
+};
+
+
 class Logo : public Scene
 {
+private:
+	Transform Info;
+	int Color;
+	ULONGLONG Time;
+	ULONGLONG DelayTime;
+	int Switching;
+
+
+	//=======================================
+	// Logo Slider
+	//=======================================
+	SliderTransform Sliders[7];
+
 public:
 	virtual void Start(void)override;
 	virtual void Update(void)override;

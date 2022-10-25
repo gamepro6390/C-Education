@@ -1,63 +1,11 @@
-#include "ScaneManager.h"
+#include "Object.h"
 
-#include "Logo.h"
-#include "Menu.h"
-#include "Stage.h"
-
-ScaneManager* ScaneManager::Instance = nullptr;
-
-ScaneManager::ScaneManager() : SceneState(nullptr)
+Object::Object()
 {
-
+	cout << "Object 持失切" << endl;
 }
 
-ScaneManager::~ScaneManager()
+Object::~Object()
 {
-	Release();
-}
-
-
-void ScaneManager::SetScene(SceneID _SceneID)
-{
-	if (SceneState != nullptr)
-	{
-		delete SceneState;
-		SceneState = nullptr;
-	}
-
-	switch (_SceneID)
-	{
-	case LOGOID:
-		SceneState = new Logo;
-		break;
-
-	case MENUID:
-		SceneState = new Menu;
-		break;
-
-	case STAGEID:
-		SceneState = new Stage;
-		break;
-
-	case EXITID:
-		exit(NULL);
-		break;
-	}
-
-	SceneState->Start();
-}
-
-void ScaneManager::Update()
-{
-	SceneState->Update();
-}
-
-void ScaneManager::Render()
-{
-	SceneState->Render();
-}
-
-void ScaneManager::Release()
-{
-
+	cout << "Object 社瑚切" << endl;
 }

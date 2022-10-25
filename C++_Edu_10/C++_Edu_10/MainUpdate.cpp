@@ -13,7 +13,7 @@ MainUpdate::~MainUpdate(void)
 
 void MainUpdate::Start(void)
 {
-	ScaneManager::GetInstance()->SetScene(STAGEID);
+	ScaneManager::GetInstance()->SetScene(LOGOID);
 }
 
 void MainUpdate::Update(void)

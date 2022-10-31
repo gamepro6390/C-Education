@@ -12,21 +12,6 @@ struct Vector3
 
 	Vector3(const float& _x, const float& _y, const float& _z) :
 		x(_x), y(_y), z(_z) {};
-
-	const Vector3 operator*(const float& _f) const { return Vector3(this->x * _f, this->y * _f, this->z * _f); }
-	const Vector3 operator/(const float& _f) const { return Vector3(this->x / _f, this->y / _f, this->z / _f); }
-	const Vector3 operator+(const Vector3& _v) const { return Vector3(this->x + _v.x, this->y + _v.y, this->z + _v.z); }
-	const Vector3 operator-(const Vector3& _v) const { return Vector3(this->x - _v.x, this->y - _v.y, this->z - _v.z); }
-
-	const Vector3 operator+=(const Vector3& _v)
-	{
-		return Vector3(this->x += _v.x, this->y += _v.y, this->z += _v.z);
-	}
-
-	const Vector3 operator-=(const Vector3& _v)
-	{
-		return Vector3(this->x -= _v.x, this->y -= _v.y, this->z -= _v.z);
-	}
 };
 
 

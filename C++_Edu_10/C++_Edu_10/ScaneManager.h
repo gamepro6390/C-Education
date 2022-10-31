@@ -25,3 +25,4 @@ private:
 public:
 	~ScaneManager();
 };
+

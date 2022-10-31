@@ -10,3 +10,5 @@ public:
 	MainUpdate(void);
 	~MainUpdate(void);
 };
+
+
